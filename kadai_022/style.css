@@ -1,0 +1,99 @@
+body{ 
+    margin: 0;
+    h1{
+        color: rgb(255, 255, 255);
+        p {
+    font-size: 20px;
+  }
+}
+}
+header {
+    margin-bottom: 20px;
+    background-color: rgb(244, 79, 79);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* main要素の設定 */
+main {
+    padding: 10px;
+  }
+  
+  /* id名parentの設定 */
+  #parent {
+    display: flex;
+    justify-content: space-between; /* 均等な間隔で配置 */
+  }
+  
+  /* class名contentsの設定 */
+  .contents {
+    border: 3px solid rgb(238, 204, 204); /* 枠線 */
+    flex-basis: 25%; /* 幅を親要素の25%に */
+    padding: 10px 15px; /* 内側の余白 */
+    margin: 20px 0; /* 外側の余白 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 中の要素を中央揃えに */
+  }
+  
+  /* h2要素の設定 */
+  .contents h2 {
+    font-size: 25px;
+    border-bottom: 3px dotted rgb(236, 122, 122); /* 下線 */
+    position: relative;
+  }
+  
+  .contents h2::before {
+    content: "●";
+    color: rgb(239, 111, 139); /* ●の色 */
+    position: absolute;
+    left: -20px; /* 適切な位置調整 */
+  }
+  
+  /* 二番目のp要素内の最初の文字の設定 */
+  .contents:nth-of-type(n) p:nth-of-type(2)::first-letter {
+    font-weight: bold;
+    color: rgb(97, 206, 249); /* 文字色 */
+  }
+  
+  .contents img {
+    margin: 10px 0; /* 上下10px、左右0の余白 */
+    width: 70%; /* 幅を70%に設定 */
+  }
+  
+  footer {
+    background-color: rgb(244, 79, 79); /* 背景色 */
+    display: flex;
+    justify-content: center; /* 中身の要素を中央揃え */
+    align-items: center; /* 縦方向の中央揃え */
+  }
+  
+  footer a {
+    color: rgb(255, 255, 255); /* 通常文字色 */
+    text-decoration: none; /* 下線を消す（必要に応じて追加） */
+  }
+  
+  footer a:visited {
+    color: rgb(193, 234, 251); /* 訪問済みリンクの文字色 */
+  }
+  
+  footer a:hover {
+    color: rgb(245, 178, 168); /* マウスカーソルが乗った時の文字色 */
+  }
+  
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 30px; /* h2のフォントサイズを30pxに設定 */
+    }
+  
+    p {
+      font-size: 25px; /* pのフォントサイズを25pxに設定 */
+    }
+  
+    #parent {
+      flex-direction: column; /* Flexboxの子要素を縦並びに変更 */
+    }
+  }
+  
+  
